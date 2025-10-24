@@ -3,7 +3,7 @@ require_once('modelo/IndexModel.php');
 class IndexController{
     private $IndexModel;
     function __construct(){
-        $this->IndexModel = new $IndexModel;
+        $this->IndexModel = new IndexModel();
     }
 
     public static function index(){

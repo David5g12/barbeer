@@ -7,6 +7,9 @@ require_once('controlador/CoctelesController.php');
 require_once('controlador/DestiladosController.php');
 require_once('controlador/CombosController.php');
 require_once('controlador/EventosController.php');
+require_once('controlador/loginController.php');
+require_once('controlador/administradorController.php');
+require_once('controlador/pedidoController.php');
 
 //lista de controladores 
 $controladores = [
@@ -16,7 +19,19 @@ $controladores = [
     'cocteles' => 'CoctelesController',
     'destilados' => 'DestiladosController',
     'combos' => 'CombosController',
-    'eventos' => 'EventosController'
+    'eventos' => 'EventosController',
+    'sesion' => 'loginController',
+    'registro' => 'loginController',
+    'registrarse' => 'loginController',
+    'iniciarSesion' => 'loginController',
+    'cerrarSesion' => 'loginController',
+    'proveedores' => 'administradorController',
+    'reportes' => 'administradorController',
+    'facturas' => 'administradorController',
+    'compras' => 'administradorController',
+    'ventas' => 'administradorController',
+    'compras_pro' => 'administradorController',
+    'pedido' => 'pedidoController'
 
 ];
 
@@ -27,11 +42,14 @@ $metodosPermitidos = [
     'CoctelesController' => ['cocteles'],
     'DestiladosController' => ['destilados'],
     'CombosController' => ['combos'],
-    'EventosController' => ['eventos']
+    'EventosController' => ['eventos'],
+    'administradorController' => ['proveedores','reportes','facturas','compras','ventas','compras_pro'],
+    'loginController' => ['sesion', 'registro', 'iniciarSesion', 'cerrarSesion', 'registrarse'],
+    'pedidoController' => ['pedido']
 ];
 
 //modo de manejo con post y get
-$controladorkey = $_GET['c'] ?? $_POST['c'] ?? 'index';
+$controladorkey = $_GET['c'] ?? $_POST['c'] ?? 'index'; 
 $metodo   = $_GET['p'] ?? $_POST['p'] ?? 'index';
 
 if(array_key_exists($controladorkey,$controladores)){

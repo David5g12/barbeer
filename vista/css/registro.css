@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.registro-body {
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.registro-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.registro-form-box {
+  background: #6f6d76;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.registro-icon-lock {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.registro-title {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.registro-form label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin: 15px 0 5px;
+  color: #444;
+}
+
+.registro-input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.registro-input-box input {
+  width: 100%;
+  padding: 10px 35px 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.registro-toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.registro-toggle-password:hover {
+  color: #e60000;
+}
+
+.registro-button {
+  width: 100%;
+  background-color: #0077cc;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registro-button:hover {
+  background-color: #005fa3;
+}
+
+.registro-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* se coloca detrás de todo */
+  overflow: hidden;
+}
+
+.registro-fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantiene proporciones, cubre toda la pantalla */
+  opacity: 0.3; /* puedes ajustar la opacidad para que no opaque el formulario */
+  filter: blur(1px); /* opcional: desenfoque para mejor contraste */
+}
