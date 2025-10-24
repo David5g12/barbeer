@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;   
+}
+
+section{
+    background-color:black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    width: 15%;
+    height: 100vh;
+    background-color: black; 
+    margin-left: 1%;
+    border: 1px solid rgb(49, 48, 48); 
+}
+.contenido{
+    background-color:black;
+    width: 84%;
+
+}
+.encabezado{
+    margin: 1% 2%;
+    width: 96%;
+    height: 25vh;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.0)), url(../img//cerveza_ecabe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: 1vw;
+    border: 1px solid rgb(49, 48, 48);
+    border-radius: 10px;
+    align-content: center;
+}
+.encabezado .texto{
+    margin: 0% 1%;
+    width: 95%;
+    color: white;
+    font-size: 1vw;
+    height: 20vh;
+    align-content: center;
+}
+
+.buscador{
+    margin: 1% 2%;
+    width: 96%;
+    height: 10vh;
+    align-content: center;
+}
+.sec_producto{
+    margin: 1% 2%;
+    width: 96%;
+    
+}
+.contenedor_btn{
+    background-color: rgb(49, 48, 48);
+    width:100%;
+}
+.btn{
+    width: 18.7%;
+}
+.sec_producto button{
+    margin: 0.5% 0.5%;
+    color: white;
+}
+.sec_producto button:hover{
+    border: 1px solid  rgb(49, 48, 48);
+    background-color: black;
+}
+
+
+#producto{
+    margin-left: 2%;
+    width: 96%;
+    
+}
+#producto h1{
+    font-size: 1.8vw;
+    color: white;
+    float: left;
+}
+
+#producto .card{
+    background-color: black;
+    color: white;
+    border: 1px solid  rgb(47, 46, 46);;
+}
+#producto a{
+    background-color: rgb(222, 169, 33);
+    border: 1px solid darkgoldenrod;
+}
+#producto .precio{
+    color:rgb(222, 169, 33);;
+}
+
+
+
+
+
+
