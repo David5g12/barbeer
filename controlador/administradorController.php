@@ -9,9 +9,7 @@ class administradorController{
     public static function facturas(){
         require_once('vista/administrador/facturas.php');
     }
-    public static function proveedores(){
-        require_once('vista/administrador/proveedores.php');
-    }
+    
     public static function reportes(){
         require_once('vista/administrador/reportes.php');
     }
@@ -19,9 +17,7 @@ class administradorController{
     public static function ventas(){
         require_once('vista/administrador/ventas.php');
     }
-    public static function compras(){
-        require_once('vista/administrador/compras.php');
-    }
+    
     public static function compras_pro(){
         require_once('vista/administrador/compras_pro.php');
     }

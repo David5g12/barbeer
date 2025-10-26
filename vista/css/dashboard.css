@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+section{
+    background-color:black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    width: 15%;
+    height: 100vh;
+    background-color: black; 
+    margin-left: 1%;
+    border: 1px solid  rgb(23, 22, 22); 
+}
+.contenido{
+    background-color:black;
+    width: 84%;
+
+}
+.encabezado{
+    margin: 1% 2%;
+    width: 90%;
+    height: auto;
+    font-size:1vw;
+    color: white;
+}
+.reporte{
+    width: 96%;
+    height: auto;
+    margin: 1% 2%;
+}
+.reporte .card{
+    background-color:  rgb(10, 10, 12);
+
+
+}
+.reporte .card-body{
+    height: 20vh;
+    border-radius: 10px;
+    margin: 1% 0%;
+    color: white;
+    border: 1px solid  rgb(23, 22, 22);
+}
+.reporte .d-flex{
+    color: rgb(120, 114, 114);
+}
+.reporte .p{
+    color: rgb(120, 114, 114);
+}
+.reporte .precio{
+    color:rgb(222, 169, 33);
+
+}
+
+#actividades{
+    width: 96%;
+    height: auto;
+    margin: 1% 2%;
+    
+}
+
+.ac_reciente{
+    color: white;
+
+}
+#actividades .card{
+    background-color: rgb(10, 10, 12);
+    color: white;
+}
+#actividades .card h5{
+    font-size: 15px;
+}
+#actividades .card p{
+    color: rgb(89, 84, 84);
+}
+#actividades .card-body{
+    width: 100%;
+    padding: 0% 1%;
+    height: 8vh;
+    background-color:  rgb(10, 10, 12);
+}
+
+.prod_vendido{
+    color: white;
+}
+
+#actividades .custom-col {
+  width: 49%;
+  padding-top: 1%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid  rgb(23, 22, 22);
+  background-color:  rgb(10, 10, 12);
+  
+}
+
+/* En pantallas pequeñas, que se apilen */
+@media (max-width: 768px) {
+  #actividades .custom-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid  rgb(23, 22, 22);
+  }
+}
+
+#producto{
+    width: 100%;
+    border-top: 1px solid  rgb(23, 22, 22) ;
+    border-bottom: 1px solid  rgb(23, 22, 22);
+    background-color:  rgb(10, 10, 12);
+}
+#actividades .precio{
+    color: rgb(222, 169, 33);
+}
+

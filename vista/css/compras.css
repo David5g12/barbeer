@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+section{
+    background-color:black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    width: 15%;
+    height: 100vh;
+    background-color: black; 
+    margin-left: 1%;
+    border: 1px solid rgb(49, 48, 48); 
+}
+
+.contenido{
+    background-color:black;
+    width: 84%;
+
+}
+.encabezado{
+    margin: 1% 2%;
+    width: 96%;
+    height: auto;
+    font-size:1vw;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.encabezado .texto{
+    width: 50%;
+    height: auto;
+}
+.encabezado .boton{
+    height: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: end;
+    
+}
+.boton .btn{
+    background-color: darkgoldenrod;
+    width: 30%;
+    font-size: 1vw;
+    justify-content: end;
+    margin: 0% 1%;
+}
+
+.reporte{
+    width: 96%;
+    margin: 1% 2%;
+    height: auto;
+    padding: 0% 0%;
+}
+.reporte .container{
+    padding: 0% 0%;
+}
+.reporte .card{
+    background-color: rgb(10, 10, 12);
+}
+
+.reporte .card-body{
+    background-color:rgb(10, 10, 12);
+    border-radius: 10px;
+    border: 1px solid rgb(23, 22, 22);
+    color: white;
+}
+.reporte .d-flex{
+    color: rgb(120, 114, 114);
+}
+.reporte p{
+    color: rgb(120, 114, 114);
+}
+
+.historial{
+    background-color: rgb(10, 10, 12);;
+    margin: 1% 2%;
+    height: auto;
+    border: 1px solid rgb(23, 22, 22) ;
+    border-radius: 10px;
+    color: white;
+    
+}
+.historial .h{
+    margin: 1% 2%;
+}
+
+.historial .card{
+    background-color: rgb(13, 13, 16) ;
+    height: 3vh;
+    border: 1px solid rgb(23, 22, 22);
+  
+    color: rgb(120, 114, 114);
+}
+.historial .card h5{
+    color: white;
+}
+
+
+
+
+

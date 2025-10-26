@@ -11,6 +11,9 @@ require_once('controlador/loginController.php');
 require_once('controlador/administradorController.php');
 require_once('controlador/pedidoController.php');
 
+require_once('controlador/ComprasController.php');
+require_once('controlador/ProveedoresController.php');
+
 //lista de controladores 
 $controladores = [
     'index' => 'IndexController',
@@ -25,10 +28,10 @@ $controladores = [
     'registrarse' => 'loginController',
     'iniciarSesion' => 'loginController',
     'cerrarSesion' => 'loginController',
-    'proveedores' => 'administradorController',
+    'proveedores' => 'ProveedoresController',
     'reportes' => 'administradorController',
     'facturas' => 'administradorController',
-    'compras' => 'administradorController',
+    'compras' => 'ComprasController',
     'ventas' => 'administradorController',
     'compras_pro' => 'administradorController',
     'pedido' => 'pedidoController'
@@ -43,9 +46,12 @@ $metodosPermitidos = [
     'DestiladosController' => ['destilados'],
     'CombosController' => ['combos'],
     'EventosController' => ['eventos'],
-    'administradorController' => ['proveedores','reportes','facturas','compras','ventas','compras_pro'],
+    'administradorController' => ['reportes','facturas','ventas','compras_pro'],
     'loginController' => ['sesion', 'registro', 'iniciarSesion', 'cerrarSesion', 'registrarse'],
-    'pedidoController' => ['pedido']
+    'pedidoController' => ['pedido'],
+
+    'ComprasController' =>['compras','productos','AgregarProducto','EditarProducto'],
+    'ProveedoresController' => ['proveedores','AgregarProveedores','EditarProveedores']
 ];
 
 //modo de manejo con post y get

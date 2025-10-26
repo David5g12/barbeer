@@ -17,7 +17,7 @@ session_start()
 <body>
   <header>
     <div class ="logo">
-        <img src="vista/img/logo.png" alt="Logotipo">
+        <img src="vista/img/logotipo.png" alt="Logotipo">
     </div>
     
   </header>
@@ -35,8 +35,10 @@ session_start()
                 <a class="nav-link" href="index.php?c=dashboard&p=dashboard"><i class="bi bi-speedometer2"></i> Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?c=compras_pro&p=compras_pro"><i class="bi bi-cart-check-fill"></i> Compras - Proveedor</a>
+                <a class="nav-link" href="index.php?c=compras&p=compras"><i class="bi bi-cart-check-fill"></i> Compras</a>
             </li>
+            <li class="nav-item">
+            
             <li class="nav-item">
                 <a class="nav-link" href="index.php?c=proveedores&p=proveedores"><i class="bi bi-truck"></i> Proveedores</a>
             </li>
