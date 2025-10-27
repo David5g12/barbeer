@@ -1,0 +1,72 @@
+
+.body{
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.ticket {
+    width: 320px;
+    background: #fff;
+    border: 1px dashed #333;
+    padding: 15px;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    margin: 20px auto;
+}
+.ticket-header{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.ticket-header .img{
+    width: 80px;
+    height: 50px;
+    background-image: url(../img//logotipo.png);
+    background-repeat: no-repeat;
+    background-size: 80px 50px;
+    margin: 2% 0%;
+   
+
+}
+.ticket-header .nombre{
+    width: 180px;
+    text-align: center;
+}
+
+.ticket-footer {
+    text-align: center;
+}
+
+.ticket-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.ticket-body {
+    margin-top: 10px;
+}
+
+.ticket-items {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ticket-items th,
+.ticket-items td {
+    border-bottom: 1px dashed #333;
+    padding: 5px 0;
+    text-align: left;
+}
+
+.ticket-total {
+    text-align: right;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.ticket-footer p {
+    font-size: 12px;
+    margin-top: 10px;
+}

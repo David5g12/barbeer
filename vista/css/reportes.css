@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+section{
+    background-color:black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    width: 15%;
+    height: 100vh;
+    background-color: black; 
+    margin-left: 1%;
+    border: 1px solid rgb(49, 48, 48); 
+}
+
+.contenido{
+    background-color:black;
+    width: 84%;
+
+}
+
+.encabezado{
+    margin: 1% 2%;
+    width: 96%;
+    height: auto;
+    font-size:1vw;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.encabezado .texto{
+    width: 50%;
+    height: auto;
+}
+.encabezado .boton{
+    height: auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: end;
+    
+}
+.boton .btn{
+    background-color: darkgoldenrod;
+    width: 30%;
+    font-size: 1vw;
+    justify-content: end;
+    margin: 0% 1%;
+}
+
+.reporte{
+    width: 96%;
+    margin: 1% 2%;
+    height: auto;
+    padding: 0% 0%;
+}
+
+.reporte .container{
+    padding: 0% 0%;
+}
+.reporte .card{
+    background-color: rgb(10, 10, 12);
+}
+
+.reporte .card-body{
+    background-color:rgb(10, 10, 12);
+    border-radius: 10px;
+    border: 1px solid rgb(23, 22, 22);
+    color: white;
+}
+.reporte .d-flex{
+    color: rgb(120, 114, 114);
+}
+.reporte p{
+    color: green;
+}
+.reporte .icono{
+    color: darkgoldenrod;
+}
+
+.graficos{
+    height: auto;
+    margin: 0% 2%;
+    
+    
+}
+
+
+.graficos .container{
+    padding: 0% 0%;
+    height: auto;
+}
+
+
+.graficos .card{
+    background-color:  rgb(10, 10, 12);
+    border-radius: 10px;
+    border: 1px solid rgb(23, 22, 22);
+}
+
+.graficos .card-body{
+    color: white;
+    font-size: 15px;
+    
+}
+
+.graficos .card-body .chart-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#producto{
+    width: 100%;
+    border-top: 1px solid  rgb(23, 22, 22) ;
+    border-bottom: 1px solid  rgb(23, 22, 22);
+    background-color:  rgb(10, 10, 12);
+}
+#producto .precio{
+    color: rgb(222, 169, 33);
+}
+                                
+
+
+
+
+

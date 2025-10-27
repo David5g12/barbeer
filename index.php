@@ -9,10 +9,12 @@ require_once('controlador/CombosController.php');
 require_once('controlador/EventosController.php');
 require_once('controlador/loginController.php');
 require_once('controlador/administradorController.php');
-require_once('controlador/pedidoController.php');
+require_once('controlador/PedidosController.php');
 
 require_once('controlador/ComprasController.php');
 require_once('controlador/ProveedoresController.php');
+require_once('controlador/ReportesController.php');
+require_once('controlador/FacturasController.php');
 
 //lista de controladores 
 $controladores = [
@@ -29,12 +31,12 @@ $controladores = [
     'iniciarSesion' => 'loginController',
     'cerrarSesion' => 'loginController',
     'proveedores' => 'ProveedoresController',
-    'reportes' => 'administradorController',
-    'facturas' => 'administradorController',
+    'reportes' => 'ReportesController',
+    'facturas' => 'FacturasController',
     'compras' => 'ComprasController',
     'ventas' => 'administradorController',
     'compras_pro' => 'administradorController',
-    'pedido' => 'pedidoController'
+    'pedidos' => 'PedidosController'
 
 ];
 
@@ -46,12 +48,16 @@ $metodosPermitidos = [
     'DestiladosController' => ['destilados'],
     'CombosController' => ['combos'],
     'EventosController' => ['eventos'],
-    'administradorController' => ['reportes','facturas','ventas','compras_pro'],
+    'administradorController' => ['facturas','ventas','compras_pro'],
     'loginController' => ['sesion', 'registro', 'iniciarSesion', 'cerrarSesion', 'registrarse'],
-    'pedidoController' => ['pedido'],
+    
 
     'ComprasController' =>['compras','productos','AgregarProducto','EditarProducto'],
-    'ProveedoresController' => ['proveedores','AgregarProveedores','EditarProveedores']
+    'ProveedoresController' => ['proveedores','AgregarProveedores','EditarProveedores'],
+    'ReportesController' =>['reportes'],
+    'FacturasController' => ['facturas','ticket','factura'],
+    'PedidosController' => ['pedidos','barra'],
+
 ];
 
 //modo de manejo con post y get

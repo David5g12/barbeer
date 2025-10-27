@@ -15,7 +15,7 @@
             
             </div>
             <div class="boton">
-                <a href="index.php?c=proveedores&p=AgregarProveedores" class="btn btn"><i class="bi bi-plus"></i> ver proveedores</a>
+                <a href="index.php?c=proveedores&p=AgregarProveedores" class="btn btn"><i class="bi bi-plus"></i>Agregar proveedores</a>
 
             </div>
         </div>

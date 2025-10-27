@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    background-color:black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    width: 15%;
+    height: 100vh;
+    background-color: black; 
+    margin-left: 1%;
+    border: 1px solid rgb(49, 48, 48); 
+}
+
+.contenido{
+    background-color:black;
+    width: 84%;
+
+}
+
+.encabezado{
+    margin: 1% 2%;
+    width: 96%;
+    height: auto;
+    font-size:1vw;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.encabezado .texto{
+    width: 50%;
+    height: auto;
+}
+
+
+.pedidos{
+    width: 96%;
+    margin: 1% 2%;
+    height: auto;
+    padding: 0% 0%;
+}
+
+.pedidos .container{
+    padding: 0% 0%;
+}
+.pedidos .card{
+    background-color: rgb(10, 10, 12);
+    color: white;
+}
+
+.pedidos .card-body{
+    background-color:rgb(10, 10, 12);
+    border-radius: 10px;
+    border: 1px solid rgb(23, 22, 22);
+    color: white;
+}
+
+.pedidos p{
+    color: green;
+}
+.pedidos .icono{
+    color: darkgoldenrod;
+}
+.pedidos .card-text select {
+    background-color: rgb(10, 10, 12);  /* fondo negro */
+    color: green;             /* texto blanco */
+    padding: 5px 10px;       /* espacio interno */
+
+}
+
+.notificacion {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.notificacion.mostrar {
+    display: block;
+}
