@@ -56,7 +56,7 @@ $metodosPermitidos = [
     'loginController' => ['sesion', 'registro', 'iniciarSesion', 'cerrarSesion', 'registrarse'],
     
 
-    'ComprasController' =>['compras','productos','AgregarProducto','EditarProducto'],
+    'ComprasController' =>['compras','productos','AgregarProducto','GuardarProducto','EditarProducto','ActualizarProducto','EliminarProductos'],
     'ProveedoresController' => ['proveedores','AgregarProveedores','EditarProveedores'],
     'ReportesController' =>['reportes'],
     'FacturasController' => ['facturas','ticket','factura'],

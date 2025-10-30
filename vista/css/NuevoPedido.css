@@ -1,24 +1,30 @@
-/* pedidos.css */
-
-/* Reset básico */
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    
 }
-
-/* Sección principal */
-section {
+section{
+    background-color:black;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* altura completa de la pantalla */
-    background-color: #f7f7f7;
+    flex-wrap: wrap;
+}
+.header{
+    width: 15%;
+    height: 100vh;
+    background-color: black; 
+    margin-left: 1%;
+    border: 1px solid rgb(49, 48, 48); 
 }
 
-/* Contenedor del contenido */
-.contenido {
+.contenido{
+    background-color:black;
+    width: 84%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+.contenido .formulario{
     background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 12px;
@@ -26,8 +32,8 @@ section {
     width: 600px; /* ancho fijo, se puede ajustar */
     max-width: 90%;
     text-align: center; /* centra títulos y texto */
-}
 
+}
 /* Encabezados */
 h2 {
     margin-bottom: 15px;
@@ -42,24 +48,6 @@ h3 {
     padding-bottom: 5px;
 }
 
-/* Tabla de productos */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-table th, table td {
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-table th {
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-/* Formularios */
 form {
     margin-bottom: 20px;
     display: flex;
@@ -94,3 +82,4 @@ form label {
     margin-right: 10px;
     font-weight: bold;
 }
+

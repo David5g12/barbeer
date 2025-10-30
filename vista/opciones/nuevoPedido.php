@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="Vista/css/pedidos.css">
+<link rel="stylesheet" href="Vista/css/NuevoPedido.css">
 
 
 <section>
@@ -9,17 +9,22 @@
     </div>
     <div class="contenido">
 
-        <h2>Crear Nuevo Pedido</h2>
+        <div class="formulario">
+            <h2>Crear Nuevo Pedido</h2>
             <form method="post" action="index.php?c=crearPedido&p=crearPedido">
                 <label>Mesa:</label>
                 <select name="mesa_id" required>
                     <?php foreach($mesas as $m): ?>
                         <option value="<?= $m['mesa_id'] ?>"><?= $m['nombre'] ?></option>
-                    <?php endforeach; ?>
+                    <?php  endforeach; ?>
                 </select>
                 <button type="submit">Crear Pedido</button>
             </form>
 
+        </div>
+
+       
+        
     </div>
 
 

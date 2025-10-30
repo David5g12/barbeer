@@ -8,12 +8,36 @@ section{
     display: flex;
     flex-wrap: wrap;
 }
-.header{
+.btn-toggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: darkgoldenrod;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+/* Animación de ocultar el panel lateral */
+.header {
+    margin: 3.5% 0%;
     width: 15%;
     height: 100vh;
-    background-color: black; 
+    background-color: black;
     margin-left: 1%;
-    border: 1px solid rgb(49, 48, 48); 
+    border: 1px solid rgb(49, 48, 48);
+    transition: all 0.4s ease;
+}
+
+.header.oculto {
+    width: 0;
+    margin-left: 0;
+    overflow: hidden;
+    border: none;
 }
 
 .contenido{
@@ -21,21 +45,23 @@ section{
 }
 
 .encabezado{
-    margin: 1% 2%;
+    margin: 4% 2%;
+    margin-bottom: 0%;
     width: 96%;
-    height: auto;
+    height: 7vh;
     font-size:1vw;
     color: white;
     display: flex;
     flex-wrap: wrap;
+    
 
 }
 .encabezado .texto{
     width: 40%;
-    height: auto;
+    height: 7vh;
 }
 .encabezado .boton{
-    height: auto;
+    height: 7vh;
     width: 60%;
     display: flex;
     align-items: center;
@@ -49,21 +75,59 @@ section{
 }
 .tabla{
     background-color:black;
-    width: 96%;
-    margin: 1% 2%;
+    width: 97%;
+    margin: 0% 2%;
     
+}
+.tabla .table{
+    border-collapse: collapse; 
 }
 .tabla .table th{
     background-color: rgb(15, 15, 15);
-    border-collapse: collapse; 
-    border: 1px solid rgb(23, 22, 22);
+    border-collapse: collapse;
+    border: 1px solid rgb(86, 77, 77);
     color: white;
+    text-align: center;
+    
 }
 .tabla .table td{
     background-color: rgb(15, 15, 15);
-    border-collapse: collapse; 
-    border: 1px solid rgb(23, 22, 22);
+    border-collapse: collapse;
+    border: 1px solid rgb(57, 52, 52);
+
     color: white;
+}
+/* Contenedor de los botones dentro de la celda */
+.btn-delac {
+    display: flex;
+    gap: 10px;             /* espacio entre botones */
+    justify-content: center; /* centra los botones en la celda */
+    align-items: center;    /* alinea verticalmente */
+    padding: 5px;           /* hace visible el fondo si se pone */
+    background-color: transparent; /* opcional: puedes poner aqua o gris */
+    border-radius: 5px;
+}
+
+/* Estilo general para los botones */
+.btn-delac a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
+/* Botón de actualizar */
+.btn-delac .editar {
+    background-color: #28a745; /* verde */
+}
+
+/* Botón de eliminar */
+.btn-delac .delete {
+    background-color: #dc3545; /* rojo */
 }
 
 
