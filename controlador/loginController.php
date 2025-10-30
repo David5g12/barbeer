@@ -27,11 +27,11 @@ class loginController{
 
             if ($userData !== false) {
                 session_start();
-                $_SESSION['id'] = $userData['id'];         // ← ahora sí asignamos el id correcto
+                $_SESSION['id_empleado'] = $userData['id_empleado'];         // ← ahora sí asignamos el id correcto
                 $_SESSION['usuario'] = $userData['usuario'];
                 $_SESSION['rol'] = $userData['rol'];
 
-                header("Location: index.php?c=index&p=index&id=".$userData['id']);
+                header("Location: index.php?c=index&p=index&id=".$userData['id_empleado']);
                 exit();
             } else {
                 echo "<script>alert('Usuario o contraseña incorrectos.');</script>";

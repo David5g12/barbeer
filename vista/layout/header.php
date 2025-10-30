@@ -1,5 +1,9 @@
 <?php
 session_start()
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +73,10 @@ session_start()
                 <a class="nav-link" href="index.php?c=eventos&p=eventos"><i class="bi bi-calendar-event-fill"></i> Eventos</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?c=pedidos&p=pedidos"><i class="bi bi-bag-check-fill"></i> Pedidos</a>
+                <a class="nav-link" href="index.php?c=nuevoPedidoForm&p=nuevoPedidoForm"><i class="bi bi-bag-check-fill"></i> Crear Pedido</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.php?c=crearObtener&p=crearObtener"><i class="bi bi-bag-check-fill"></i>Pedido</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="index.php?c=pedidos&p=barra"><i class="bi bi-grid-fill"></i> Barra</a>

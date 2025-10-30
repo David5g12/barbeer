@@ -36,8 +36,12 @@ $controladores = [
     'compras' => 'ComprasController',
     'ventas' => 'administradorController',
     'compras_pro' => 'administradorController',
-    'pedidos' => 'PedidosController'
-
+    'pedidos' => 'PedidosController',
+    'nuevoPedidoForm' => 'PedidosController',
+    'crearPedido' => 'PedidosController',
+    'agregarProducto' => 'PedidosController',
+    'cerrarPedido' => 'PedidosController',
+    'crearObtener' => 'PedidosController'
 ];
 
 $metodosPermitidos = [
@@ -56,7 +60,7 @@ $metodosPermitidos = [
     'ProveedoresController' => ['proveedores','AgregarProveedores','EditarProveedores'],
     'ReportesController' =>['reportes'],
     'FacturasController' => ['facturas','ticket','factura'],
-    'PedidosController' => ['pedidos','barra'],
+    'PedidosController' => ['pedidos','barra', 'nuevoPedidoForm', 'crearPedido', 'agregarProducto', 'cerrarPedido', 'crearObtener'],
 
 ];
 

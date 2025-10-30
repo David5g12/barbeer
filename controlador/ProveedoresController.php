@@ -5,7 +5,7 @@ class ProveedoresController{
     private $ProveedoresModel;
 
     function __construct(){
-        $this->$ProveedoresModel = new $ProveedoresModel;
+        $this->ProveedoresModel = new ProveedoresModel();
     }
     public static function proveedores(){
         require_once('vista/administrador/proveedores.php');

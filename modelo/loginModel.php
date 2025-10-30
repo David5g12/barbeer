@@ -2,7 +2,7 @@
 class loginModel{
      public function iniciarSesion($username, $password) {
         include_once('conexion.php');
-        $cnn = new Conexion();
+        $cnn = Conexion::getInstancia();
 
         $consulta = "SELECT * FROM empleado WHERE usuario = :usuario";
         $resultado = $cnn->prepare($consulta);
@@ -12,7 +12,7 @@ class loginModel{
 
         if ($user && password_verify($password, $user['password'])) {
             return [
-                'id' => $user['id'],
+                'id_empleado' => $user['id_empleado'],
                 'usuario' => $user['usuario'],
                 'rol' => !empty($user['administrador']) && $user['administrador'] == 1 ? 'admin' : 'empleado'
             ];
@@ -22,7 +22,7 @@ class loginModel{
     }
     public function registrarse($nombre, $email, $username, $password) {
         include_once('conexion.php');
-        $cnn = new Conexion();
+        $cnn = Conexion::getInstancia();
         $passwordHash = password_hash($password, PASSWORD_BCRYPT);
         $consulta = "INSERT INTO empleado (nombre, correo, usuario, password) VALUES (:nombre, :correo, :usuario, :password)";
         $resultado = $cnn->prepare($consulta);

@@ -4,7 +4,7 @@ class ComprasController{
     private $ComprasModel;
 
     function __construct(){
-        $this->$ComprasModel = new $ComprasModel;
+        $this->ComprasModel = new ComprasModel();
     }
 
     public static function compras(){
