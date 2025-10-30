@@ -1,4 +1,8 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once('config.php');
 require_once('controlador/IndexController.php');
 require_once('controlador/DashboardController.php');
@@ -41,7 +45,9 @@ $controladores = [
     'crearPedido' => 'PedidosController',
     'agregarProducto' => 'PedidosController',
     'cerrarPedido' => 'PedidosController',
-    'crearObtener' => 'PedidosController'
+    'obtenerDetallePedido' => 'PedidosController',
+    'eliminarProductopedido' => 'PedidosController',
+    'cancelarPedido' => 'PedidosController'
 ];
 
 $metodosPermitidos = [
@@ -60,7 +66,7 @@ $metodosPermitidos = [
     'ProveedoresController' => ['proveedores','AgregarProveedores','EditarProveedores'],
     'ReportesController' =>['reportes'],
     'FacturasController' => ['facturas','ticket','factura'],
-    'PedidosController' => ['pedidos','barra', 'nuevoPedidoForm', 'crearPedido', 'agregarProducto', 'cerrarPedido', 'crearObtener'],
+    'PedidosController' => ['pedidos','barra', 'nuevoPedidoForm', 'crearPedido', 'agregarProducto', 'cerrarPedido', 'obtenerDetallePedido', 'eliminarProductopedido', 'cancelarPedido'],
 
 ];
 

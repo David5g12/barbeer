@@ -52,6 +52,18 @@ class PedidosModel{
 
         return $pedido_id;
     }
+    public function cancelarPedido($pedido_id, $estado_pedido,$mesa_id,$estado_mesa){
+        include_once('conexion.php');
+        $cnn = Conexion::getInstancia();
+        $sql = "UPDATE PEDIDOS 
+            SET estado = ? 
+            WHERE pedido_id = ?";
+        $stmt = $cnn->prepare($sql);
+        $stmt->execute([$estado_pedido,$pedido_id]);
+       
+        $this->actualizaEstadoMesa($mesa_id,$estado_mesa);
+
+    }
 
 
     public function agregarDetalle($pedido_id, $producto_id = null, $combo_id = null, $cantidad, $precio, $es_combo) {
@@ -64,6 +76,11 @@ class PedidosModel{
         ");
         $stmt->execute([$pedido_id, $producto_id, $combo_id, $cantidad, $precio, $es_combo]);
         $this->actualizarTotal($pedido_id);
+        if (!$es_combo) {
+            $this->restarStockProducto($producto_id, $cantidad);
+        }else{
+            $this->restarStockCombos($combo_id,$cantidad);
+        }
     }
 
     public function actualizarTotal($pedido_id) {
@@ -112,7 +129,18 @@ class PedidosModel{
 
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
+    public function eliminarDetalle($detalle_id, $cantidad, $producto_id,$combo_id) {
+        include_once('conexion.php');
+        $conexion = Conexion::getInstancia();
+        $stmt = $conexion->prepare("DELETE FROM DETALLE_PEDIDOS WHERE detalle_pedido_id=?");
+        $stmt->execute([$detalle_id]);
+        if($producto_id){
+            $this->sumarStockProductos($producto_id, $cantidad);
+        }else{
+            $this->sumarStockCombos($combo_id, $cantidad);
+        }
 
+    }
     public function obtenerNombreProducto($pedido_id) {
         include_once('conexion.php');
         $conexion = Conexion::getInstancia();
@@ -134,5 +162,57 @@ class PedidosModel{
         $stmt->execute([$pedido_id]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function restarStockProducto($producto_id, $cantidad) {
+        include_once('conexion.php');
+        $cnn = Conexion::getInstancia();
+         $sql = "UPDATE PRODUCTOS 
+            SET stock_unidades = stock_unidades - ? 
+            WHERE producto_id = ?";
+        $stmt = $cnn->prepare($sql);
+        $stmt->execute([$cantidad, $producto_id]);
+
+    }
+    public function sumarStockProductos($producto_id, $cantidad) {
+        include_once('conexion.php');
+        $cnn = Conexion::getInstancia();
+        $sql = "UPDATE PRODUCTOS 
+            SET stock_unidades = stock_unidades + ? 
+            WHERE producto_id = ?";
+        $stmt = $cnn->prepare($sql);
+        $stmt->execute([$cantidad, $producto_id]);
+
+    }
+    public function restarStockCombos($combo_id, $cantidad) {
+        include_once('conexion.php');
+        $cnn = Conexion::getInstancia();
+         $sql = "UPDATE  COMBOS 
+            SET stock_combos = stock_combos - ? 
+            WHERE combo_id = ?";
+        $stmt = $cnn->prepare($sql);
+        $stmt->execute([$cantidad, $combo_id]);
+
+    }
+    public function sumarStockCombos($combo_id, $cantidad) {
+        include_once('conexion.php');
+        $cnn = Conexion::getInstancia();
+        $sql = "UPDATE COMBOS 
+            SET stock_combos = stock_combos + ? 
+            WHERE combo_id = ?";
+        $stmt = $cnn->prepare($sql);
+        $stmt->execute([$cantidad, $combo_id]);
+
+    }
+    public function actualizaEstadoMesa($mesa_id, $estado){
+        include_once('conexion.php');
+        $cnn = Conexion::getInstancia();
+        $sql = "UPDATE  MESAS 
+            SET estado = ? 
+            WHERE mesa_id = ?";
+        $stmt = $cnn->prepare($sql);
+        $stmt->execute([$estado,$mesa_id]);
+    }
+    
+
+
 }
 ?>

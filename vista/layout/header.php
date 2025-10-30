@@ -1,10 +1,3 @@
-<?php
-session_start()
-
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,7 +69,7 @@ session_start()
                 <a class="nav-link" href="index.php?c=nuevoPedidoForm&p=nuevoPedidoForm"><i class="bi bi-bag-check-fill"></i> Crear Pedido</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.php?c=crearObtener&p=crearObtener"><i class="bi bi-bag-check-fill"></i>Pedido</a>
+                <a class="nav-link" href="index.php?c=obtenerDetallePedido&p=obtenerDetallePedido"><i class="bi bi-bag-check-fill"></i>Pedido</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="index.php?c=pedidos&p=barra"><i class="bi bi-grid-fill"></i> Barra</a>
@@ -97,9 +90,9 @@ session_start()
         </ul>
 
 
-    <div class="pie_nav">
+    <!-- <div class="pie_nav">
         <i class="bi bi-person-fill"></i>  <!--aqui debes agregar el usuario logueado con su correo o usuario-->
-    </div>
+    <!-- </div> --> 
 
   </nav>
 
