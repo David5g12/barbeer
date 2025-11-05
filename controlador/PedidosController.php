@@ -136,5 +136,12 @@ class PedidosController{
         unset($_SESSION['pedido_id'], $_SESSION['mesa_id']);
         header("Location: index.php?c=nuevoPedidoForm&p=nuevoPedidoForm");
     }
+     public static function crearticket() {
+        $PedidosModel = new PedidosModel();
+        $pedido_id = $_SESSION['pedido_id'];
+        $detallePedido = $PedidosModel->obtenerDetalle($pedido_id);
+        include 'vista/tablas/ticket.php';
+     }
+    
 }
 ?>

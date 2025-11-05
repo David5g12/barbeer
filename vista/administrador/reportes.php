@@ -1,5 +1,12 @@
 <link rel="stylesheet" href="vista/css/reportes.css">
-
+<?php
+foreach($reporte_mensual as $reporte){
+    $mes = $reporte['mes'];
+    $ventas_totales = $reporte['ventas_totales'];
+    $monto_transferencias = $reporte['monto_transferencias'];
+    $transacciones_transferencias = $reporte['transacciones_transferencias'];
+}
+?>
 <section>
     <div class="header">
         <?php
@@ -32,8 +39,9 @@
                                     <h5 class="mb-0 icono"><i class="bi bi-currency-dollar"></i></h5>
                                 </div>
                                 <div class="p mb-0">
-                                    <h5 class="card-text mb-0">$68,450</h5>
-                                    <p class="card-text mb-0">+182% vs mes anteriro</p>
+                                    <h5 class="card-text mb-0">
+                                        <?php echo number_format($ventas_totales,2,'.',','); ?>
+                                    </h5>
                                 </div>
                                 
                             </div>
@@ -48,29 +56,15 @@
                                     <h5 class="mb-0 icono"><i class="bi bi-currency-dollar"></i></h5>
                                 </div>
                                 <div class="p mb-0">
-                                    <h5 class="card-text mb-0">$1,245</h5>
-                                    <p class="card-text mb-0">+12.5% vs mes anteriro</p>
+                                    <h5 class="card-text mb-0">
+                                        <?php echo number_format($transacciones_transferencias,0,'.',','); ?>
+                                    </h5>
                                 </div>
                                 
                             </div>
                         </div>
                     </div>
-                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-4">
-                                    <h5 class="card-title mb-0">Ticket Promedio</h5>
-                                    <h5 class="mb-0 icono"><i class="bi bi-currency-dollar"></i></h5>
-                                </div>
-                                <div class="p mb-0">
-                                    <h5 class="card-text mb-0">$54.98</h5>
-                                    <p class="card-text mb-0">+5.1% vs mes anteriro</p>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
+
                      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                         <div class="card h-100">
                             <div class="card-body">
@@ -80,8 +74,9 @@
                                     <h5 class="mb-0 icono"><i class="bi bi-currency-dollar"></i></h5>
                                 </div>
                                 <div class="p mb-0">
-                                    <h5 class="card-text mb-0">$3,842</h5>
-                                    <p class="card-text mb-0">+15.3% vs mes anteriro</p>
+                                    <h5 class="card-text mb-0">
+                                        <?php echo number_format($reporte['total_productos_vendidos'],0,'.',','); ?>
+                                    </h5>
                                 </div>
                                 
                             </div>
@@ -184,34 +179,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-6 mb-4">
-                        <div id="producto" class="container">
-                            <div class="row">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-center mb-0">
-                                            <h5 class="card-title">Cerveza corona</h5>
-                                            <h5 class="mb-0 precio"><i class="bi bi-currency-dollar">450</i></h5>
-                                        </div>
-                                        <p>40 unidades</p>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="d-flex justify-content-between align-items-center mb-0">
-                                            <h5 class="card-title">Cerveza corona</h5>
-                                            <h5 class="mb-0 precio"><i class="bi bi-currency-dollar">450</i></h5>
-                                        </div>
-                                        <p>40 unidades</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
                     
                 </div>
             </div>

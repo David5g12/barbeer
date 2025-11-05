@@ -8,6 +8,9 @@ class ProveedoresController{
         $this->ProveedoresModel = new ProveedoresModel();
     }
     public static function proveedores(){
+        $proveedor = new ProveedoresModel();
+        $total_proveedores = $proveedor->TotalProveedores();
+        $datos_proveedores = $proveedor->DatosProveedores();
         require_once('vista/administrador/proveedores.php');
     }
     

@@ -3,7 +3,7 @@
 <?php
 foreach($datos as $valor){
     $id = $valor['producto_id'];
-    $nombre = $valor['nombre'];
+    $nombre = $valor['nombre_producto'];
     $categoria = $valor['categoria'];
     $tipo = $valor['tipo'];
     $descripcion = $valor['descripcion'];

@@ -69,73 +69,102 @@
                     <?php endif; ?>
 
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Internacionales">
-                        <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="card-title mb-0">Corona Extra</h5>
-                                    <h5 class="mb-0 precio">$ 85</h5>
-                                </div>
-                                
-                                <p class="card-text">Nacionales precio</p>
-                                <p class="card-text">Cerveza clara mexicana, refrescante y ligera</p>
-                                <a class="btn btn-primary w-100" href="index.php?p=paquetes">Agregar al pedido</a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php if ($Artesanal && count($Artesanal) > 0): ?>
+                        <?php foreach ($Artesanal as $cerv): ?>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Artesanales">
+                                <div class="card h-100">
+                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $cerv['img']; ?>" alt="Card image cap">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="card-title mb-0"><?php echo $cerv['nombre_producto']; ?></h5>
+                                            <h5 class="mb-0 precio">$<?php echo $cerv['precio_venta']; ?></h5>
+                                        </div>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Artesanales">
-                        <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="card-title mb-0">Porona Extra</h5>
-                                    <h5 class="mb-0 precio">$ 100</h5>
-                                </div>
-                                
-                                <p class="card-text">Nacionales</p>
-                                <p class="card-text">Cerveza clara mexicana, refrescante y ligera</p>
-                                <a class="btn btn-primary w-100" href="index.php?p=paquetes">Agregar al pedido</a>
-                            </div>
-                        </div>
-                    </div>
+                                        <p class="card-text"><?php echo $cerv['tipo']; ?></p>
+                                        <p class="card-text"><?php echo $cerv['descripcion']; ?></p>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Importadas">
-                        <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="card-title mb-0">Corona Extra</h5>
-                                    <h5 class="mb-0 precio">$ 105</h5>
+                                        <!-- FORMULARIO -->
+                                        <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
+                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input type="hidden" name="producto_id" value="<?php echo $cerv['producto_id']; ?>">
+                                            <input type="hidden" name="nombre" value="<?php echo $cerv['nombre_producto']; ?>">
+                                            <input type="hidden" name="precio_venta" value="<?php echo $cerv['precio_venta']; ?>">
+                                            <input type="hidden" name="tipo" value="<?php echo $cerv['tipo']; ?>">
+                                            
+                                            <button type="submit" class="btn btn-primary w-100">Agregar al pedido</button>
+                                        </form>
+                                    </div>
                                 </div>
-                                
-                                <p class="card-text">Nacionales</p>
-                                <p class="card-text">Cerveza clara mexicana, refrescante y ligera</p>
-                                <a class="btn btn-primary w-100" href="index.php?p=paquetes">Agregar al pedido</a>
                             </div>
-                        </div>
-                    </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No se encontraron cervezas.</p>
+                    <?php endif; ?>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Barril">
-                        <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="card-title mb-0">Corona Extra</h5>
-                                    <h5 class="mb-0 precio">$ 200</h5>
+                    <?php if ($Importadas && count($Importadas) > 0): ?>
+                        <?php foreach ($Importadas as $cerv): ?>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Importadas">
+                                <div class="card h-100">
+                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="card-title mb-0"><?php echo $cerv['nombre_producto']; ?></h5>
+                                            <h5 class="mb-0 precio">$<?php echo $cerv['precio_venta']; ?></h5>
+                                        </div>
+
+                                        <p class="card-text"><?php echo $cerv['tipo']; ?></p>
+                                        <p class="card-text"><?php echo $cerv['descripcion']; ?></p>
+
+                                        <!-- FORMULARIO -->
+                                        <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
+                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input type="hidden" name="producto_id" value="<?php echo $cerv['producto_id']; ?>">
+                                            <input type="hidden" name="nombre" value="<?php echo $cerv['nombre_producto']; ?>">
+                                            <input type="hidden" name="precio_venta" value="<?php echo $cerv['precio_venta']; ?>">
+                                            <input type="hidden" name="tipo" value="<?php echo $cerv['tipo']; ?>">
+                                            
+                                            <button type="submit" class="btn btn-primary w-100">Agregar al pedido</button>
+                                        </form>
+                                    </div>
                                 </div>
-                                
-                                <p class="card-text">Nacionales</p>
-                                <p class="card-text">Cerveza clara mexicana, refrescante y ligera</p>
-                                <a class="btn btn-primary w-100" href="index.php?p=paquetes">Agregar al pedido</a>
                             </div>
-                        </div>
-                    </div>                    
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No se encontraron cervezas.</p>
+                    <?php endif; ?>
+
+
+                    <?php if ($Barril && count($Barril) > 0): ?>
+                        <?php foreach ($Barril as $cerv): ?>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Barril">
+                                <div class="card h-100">
+                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="card-title mb-0"><?php echo $cerv['nombre_producto']; ?></h5>
+                                            <h5 class="mb-0 precio">$<?php echo $cerv['precio_venta']; ?></h5>
+                                        </div>
+
+                                        <p class="card-text"><?php echo $cerv['tipo']; ?></p>
+                                        <p class="card-text"><?php echo $cerv['descripcion']; ?></p>
+
+                                        <!-- FORMULARIO -->
+                                        <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
+                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input type="hidden" name="producto_id" value="<?php echo $cerv['producto_id']; ?>">
+                                            <input type="hidden" name="nombre" value="<?php echo $cerv['nombre_producto']; ?>">
+                                            <input type="hidden" name="precio_venta" value="<?php echo $cerv['precio_venta']; ?>">
+                                            <input type="hidden" name="tipo" value="<?php echo $cerv['tipo']; ?>">
+                                            
+                                            <button type="submit" class="btn btn-primary w-100">Agregar al pedido</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No se encontraron cervezas.</p>
+                    <?php endif; ?>        
             
             
             

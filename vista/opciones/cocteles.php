@@ -37,57 +37,106 @@
 
             
             <div id="producto" class="container my-4">
+
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Clasicos">
-                        <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="vista/img/cocteles_ecabez.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="card-title mb-0">Margarita</h5>
-                                    <h5 class="mb-0 precio">$ 120</h5>
-                                </div>
-                                
-                                <p class="card-text">Clasicos</p>
-                                <p class="card-text">Tequila, triple sec, limón y sal</p>
-                                <a class="btn btn-primary w-100" href="index.php?p=paquetes">Agregar al pedido</a>
-                            </div>
-                        </div>
-                    </div>
+                   
+                 <?php if ($Clasicos && count($Clasicos) > 0): ?>
+                        <?php foreach ($Clasicos as $coct): ?>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Clasicos">
+                                <div class="card h-100">
+                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="card-title mb-0"><?php echo $coct['nombre_producto']; ?></h5>
+                                            <h5 class="mb-0 precio">$<?php echo $coct['precio_venta']; ?></h5>
+                                        </div>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="De la casa">
-                        <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="vista/img/cocteles_ecabez.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="card-title mb-0">Margarita</h5>
-                                    <h5 class="mb-0 precio">$ 120</h5>
-                                </div>
-                                
-                                <p class="card-text">De la casa</p>
-                                <p class="card-text">Tequila, triple sec, limón y sal</p>
-                                <a class="btn btn-primary w-100" href="index.php?p=paquetes">Agregar al pedido</a>
-                            </div>
-                        </div>
-                    </div>
+                                        <p class="card-text"><?php echo $coct['tipo']; ?></p>
+                                        <p class="card-text"><?php echo $coct['descripcion']; ?></p>
 
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Sin alcohol">
-                        <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="vista/img/cocteles_ecabez.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="card-title mb-0">Margarita</h5>
-                                    <h5 class="mb-0 precio">$ 120</h5>
+                                        <!-- FORMULARIO -->
+                                        <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
+                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input type="hidden" name="producto_id" value="<?php echo $coct['producto_id']; ?>">
+                                            <input type="hidden" name="nombre" value="<?php echo $coct['nombre_producto']; ?>">
+                                            <input type="hidden" name="precio_venta" value="<?php echo $coct['precio_venta']; ?>">
+                                            <input type="hidden" name="tipo" value="<?php echo $coct['tipo']; ?>">
+                                            
+                                            <button type="submit" class="btn btn-primary w-100">Agregar al pedido</button>
+                                        </form>
+                                    </div>
                                 </div>
-                                
-                                <p class="card-text">Sin alcohol</p>
-                                <p class="card-text">Tequila, triple sec, limón y sal</p>
-                                <a class="btn btn-primary w-100" href="index.php?p=paquetes">Agregar al pedido</a>
                             </div>
-                        </div>
-                    </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No se encontraron Cocteles.</p>
+                    <?php endif; ?>
+
+                    <?php if ($delacasa && count($delacasa) > 0): ?>
+                        <?php foreach ($delacasa as $coct): ?>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="De la casa">
+                                <div class="card h-100">
+                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="card-title mb-0"><?php echo $coct['nombre_producto']; ?></h5>
+                                            <h5 class="mb-0 precio">$<?php echo $coct['precio_venta']; ?></h5>
+                                        </div>
+
+                                        <p class="card-text"><?php echo $coct['tipo']; ?></p>
+                                        <p class="card-text"><?php echo $coct['descripcion']; ?></p>
+
+                                        <!-- FORMULARIO -->
+                                        <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
+                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input type="hidden" name="producto_id" value="<?php echo $coct['producto_id']; ?>">
+                                            <input type="hidden" name="nombre" value="<?php echo $coct['nombre_producto']; ?>">
+                                            <input type="hidden" name="precio_venta" value="<?php echo $coct['precio_venta']; ?>">
+                                            <input type="hidden" name="tipo" value="<?php echo $coct['tipo']; ?>">
+                                            
+                                            <button type="submit" class="btn btn-primary w-100">Agregar al pedido</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No se encontraron Cocteles.</p>
+                    <?php endif; ?>
+
+                    <?php if ($Sinalcohol && count($Sinalcohol) > 0): ?>
+                        <?php foreach ($Sinalcohol as $coct): ?>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Sin alcohol">
+                                <div class="card h-100">
+                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <h5 class="card-title mb-0"><?php echo $coct['nombre_producto']; ?></h5>
+                                            <h5 class="mb-0 precio">$<?php echo $coct['precio_venta']; ?></h5>
+                                        </div>
+
+                                        <p class="card-text"><?php echo $coct['tipo']; ?></p>
+                                        <p class="card-text"><?php echo $coct['descripcion']; ?></p>
+
+                                        <!-- FORMULARIO -->
+                                        <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
+                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input type="hidden" name="producto_id" value="<?php echo $coct['producto_id']; ?>">
+                                            <input type="hidden" name="nombre" value="<?php echo $coct['nombre_producto']; ?>">
+                                            <input type="hidden" name="precio_venta" value="<?php echo $coct['precio_venta']; ?>">
+                                            <input type="hidden" name="tipo" value="<?php echo $coct['tipo']; ?>">
+                                            
+                                            <button type="submit" class="btn btn-primary w-100">Agregar al pedido</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No se encontraron Cocteles.</p>
+                    <?php endif; ?>
+
+                    
 
                 
 

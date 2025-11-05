@@ -41,7 +41,7 @@
                     <?php foreach($datos as $valor):?>
                         <tr>
                             <td><?= $valor['producto_id']?></td>
-                            <td><?= $valor['nombre']?> </td>
+                            <td><?= $valor['nombre_producto']?> </td>
                             <td><?= $valor['categoria']?></td>
                             <td><?= $valor['tipo']?></td>
                             <td><?= $valor['descripcion']?></td>

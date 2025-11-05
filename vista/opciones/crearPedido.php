@@ -97,14 +97,14 @@ if (!isset($_SESSION['pedido_id']) || !isset($_SESSION['mesa_id'])) {
     <button type="submit">Agregar</button>
 </form>
 
-<form method="post" action="index.php?c=cerrarPedido&p=cerrarPedido">
+<form method="post" action="index.php?c=crearticket&p=crearticket">
     <label>Metodo de Pago:</label>
     <select name="metodo_pago">
         <option value="Efectivo">Efectivo</option>
         <option value="Tarjeta">Tarjeta</option>
         <option value="Transferencia">Transferencia</option>
     </select>
-    <button type="submit">Cerrar Pedido</button>
+    <button type="submit">Crear Ticket</button>
     <form method="post" action="index.php?c=cancelarPedido&p=cancelarPedido">
         <input type="hidden" name="pedido_id" value="<?= $_SESSION['pedido_id'] ?>">
         <input type="hidden" name="mesa_id" value="<?= $_SESSION['mesa_id'] ?>">

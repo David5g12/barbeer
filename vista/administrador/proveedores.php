@@ -33,7 +33,13 @@
                                     <h5 class="mb-0 icono"><i class="bi bi-people-fill"></i></h5>
                                 </div>
                                 <div class="p mb-0">
-                                    <h5 class="card-text mb-0">4</h5>
+                                    <h5 class="card-text mb-0">
+                                        <?php
+                                            foreach($total_proveedores as $total){
+                                                echo $total['total_proveedores'];
+                                            }
+                                        ?>
+                                    </h5>
                                     <p class="card-text mb-0">Provedorees activos</p>
                                 </div>
                                 
@@ -75,22 +81,52 @@
         <div class="proveedores">
             <div class="container my-4">
                 <div class="row" id="contenedor-cards">
+                    <?php if ($datos_proveedores && count($datos_proveedores) > 0): ?>
+                        <?php foreach ($datos_proveedores as $proveedor): ?>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-6 mb-4">
                         <div class="card h-100">
                             <div class="card-body">
                                 <!-- Contenedor flex para título y precio -->
                                 <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h5 class="card-title mb-0">Distibuidora de cerveza del norte</h5>
-                                    <h5 class="mb-0 categoria">Cerveza</h5>   
+                                    <h5 class="card-title mb-0">
+                                        <?php 
+                                            echo $proveedor['nombre'];
+                                        ?>
+                                    </h5>
+                                    <h5 class="mb-0 categoria">
+                                        <?php 
+                                            echo $proveedor['categorias_suministradas'];
+                                        ?>
+                                    </h5>   
                                 </div>
                                 <div class=" sup  mb-4">
-                                    <h5>SUP-001</h5>
+                                    <h5>
+                                        <?php 
+                                            echo $proveedor['proveedor_id'];
+                                        ?>
+                                    </h5>
                                 </div>
                                 <div class="datos mb-1 d-flex flex-column gap-2">
-                                    <a href="" class="d-block"><i class="bi bi-person-fill"></i> Juan Pérez</a>
-                                    <a href="" class="d-block email"> <i class="bi bi-envelope-fill"></i> ventas@cervecerianorte.com</a>
-                                    <a href="" class="d-block"><i class="bi bi-telephone-fill"></i>+52 8112345678</a>
-                                    <a href="" class="d-block direccion" ><i class="bi bi-geo-alt-fill"></i>avenida</a>
+                                    <a href="" class="d-block"><i class="bi bi-person-fill"></i>
+                                        <?php 
+                                            echo $proveedor['contacto_nombre'];
+                                        ?>
+                                </a>
+                                    <a href="" class="d-block email"> <i class="bi bi-envelope-fill"></i>
+                                        <?php 
+                                            echo $proveedor['contacto_email'];
+                                        ?>
+                                </a>
+                                    <a href="" class="d-block"><i class="bi bi-telephone-fill"></i>
+                                        <?php 
+                                            echo $proveedor['contacto_telefono'];
+                                        ?>
+                                </a>
+                                    <a href="" class="d-block direccion" ><i class="bi bi-geo-alt-fill"></i>
+                                        <?php 
+                                            echo $proveedor['direccion'];
+                                        ?>
+                                </a>
                                 </div>
                                 <div class="botones">
                                     <a href="index.php?c=proveedores&p=EditarProveedores" class="btn btn-edit"><i class="bi bi-pencil"></i>Editar</a>
@@ -101,73 +137,10 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-6 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h5 class="card-title mb-0">Licores premium SA</h5>
-                                    <h5 class="mb-0 categoria">Licores</h5>   
-                                </div>
-                                <div class=" sup  mb-4">
-                                    <h5>SUP-001</h5>
-                                </div>
-                                <div class="datos mb-1 d-flex flex-column gap-2">
-                                    <a href="" class="d-block"><i class="bi bi-person-fill"></i> Maria González</a>
-                                    <a href="" class="d-block email"> <i class="bi bi-envelope-fill"></i> contacto@licorespremium.com</a>
-                                    <a href="" class="d-block"><i class="bi bi-telephone-fill"></i>+52 8112345678</a>
-                                    <a href="" class="d-block direccion" ><i class="bi bi-geo-alt-fill"></i>Calle reforma</a>
-                                </div>
-                                <div class="botones">
-                                    <a href="index.php?c=proveedores&p=EditarProveedores" class="btn btn-edit"><i class="bi bi-pencil"></i>Editar</a>
-                                    <a href="" class="btn btn-delete"><i class="bi bi-trash"></i></a>
-
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-6 mb-4">
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <!-- Contenedor flex para título y precio -->
-                                <div class="d-flex justify-content-between align-items-center mb-1">
-                                    <h5 class="card-title mb-0">Distibuidora de cerveza del norte</h5>
-                                    <h5 class="mb-0 categoria">Cerveza</h5>   
-                                </div>
-                                <div class=" sup  mb-4">
-                                    <h5>SUP-001</h5>
-                                </div>
-                                <div class="datos mb-1 d-flex flex-column gap-2">
-                                    <a href="" class="d-block"><i class="bi bi-person-fill"></i> Juan Pérez</a>
-                                    <a href="" class="d-block email"> <i class="bi bi-envelope-fill"></i> ventas@cervecerianorte.com</a>
-                                    <a href="" class="d-block"><i class="bi bi-telephone-fill"></i>+52 8112345678</a>
-                                    <a href="" class="d-block direccion" ><i class="bi bi-geo-alt-fill"></i>avenida</a>
-                                </div>
-                                <div class="botones">
-                                    <a href="index.php?c=proveedores&p=EditarProveedores" class="btn btn-edit"><i class="bi bi-pencil"></i>Editar</a>
-                                    <a href="" class="btn btn-delete"><i class="bi bi-trash"></i></a>
-
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No se encontraron Proveedores.</p>
+                    <?php endif; ?>
 
                 </div>
             </div>

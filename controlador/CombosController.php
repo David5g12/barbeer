@@ -7,7 +7,14 @@ class CombosController{
         $this->CombosModel = new CombosModel();
     }
     public static function combos(){
+        $combos = self::obtenerCombos();
         require_once('vista/opciones/combos.php');
+    }
+    public static function obtenerCombos(){
+        $combosModel = new CombosModel();
+        $combos = $combosModel->ConsultarCombos();
+        require_once('vista/opciones/combos.php');
+
     }
 }
 ?>

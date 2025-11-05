@@ -8,6 +8,11 @@ class ComprasController{
     }
 
     public static function compras(){
+        $Total_mes = new ComprasModel();
+        $total_mes_compras = $Total_mes->TotalComprasMes();
+        $pendientes = $Total_mes->ComprasPendientes();
+        $recibidas = $Total_mes->ComprasRecibidas();
+        $historial_compras = $Total_mes->HistorialCompras();
         require_once('vista/administrador/compras.php');
     }
     
@@ -114,5 +119,6 @@ class ComprasController{
         header("location:".urlsite."index.php?c=compras&p=productos");
 
     }
+
 }
 ?>
