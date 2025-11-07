@@ -19,22 +19,35 @@
         
             <div id="producto" class="container my-4">
                 <div class="row">
+                     <?php if ($eventos && count($eventos) > 0): ?>
+                        <?php foreach ($eventos as $event): ?>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Clasicos">
                         <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="vista/img/img_song.png" alt="Card image cap">
+                            <img class="card-img-top img-fluid" src="vista/img/<?php echo $event['img']; ?>" alt="Card image cap">
                             <div class="card-body">
                                 <!-- Contenedor flex para título y precio -->
                                 <div class="d-flex justify-content-between align-items-center mb-2">
-                                    <h5 class="card-title mb-0">Margarita</h5>
-                                    <h5 class="mb-0 precio">$ 120</h5>
+                                    <h5 class="card-title mb-0">
+                                        <?php echo htmlspecialchars($event['nombre']); ?>
+                                    </h5>
+                                    <h5 class="mb-0 precio">
+                                        <?php echo htmlspecialchars($event['horario']); ?>
+                                    </h5>
                                 </div>
                                 
-                                <p class="card-text">Clasicos</p>
-                                <p class="card-text">Tequila, triple sec, limón y sal</p>
-                                <a class="btn btn-primary w-100" href="index.php?p=paquetes">Agregar al pedido</a>
+                                <p class="card-text">
+                                    <?php echo htmlspecialchars($event['descripcion']); ?>
+                                </p>
+                                <p class="card-text">
+                                    <?php echo htmlspecialchars($event['promocion']); ?>
+                                </p>
                             </div>
                         </div>
                     </div>
+                    <?php endforeach; ?>
+                    <?php else: ?>
+                        <p>No se encontraron Eventos.</p>
+                    <?php endif; ?>
                     
 
                     

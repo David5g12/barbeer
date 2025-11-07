@@ -1,5 +1,6 @@
 <?php
 class FacturasModel{
+    
     public function facturasGeneral(){
        include_once('conexion.php');
         $conexion = Conexion::getInstancia();

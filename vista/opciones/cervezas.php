@@ -40,7 +40,7 @@
                         <?php foreach ($Nacionales as $cerv): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Nacionales">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $cerv['img']; ?>" alt="Card image cap">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $cerv['nombre_producto']; ?></h5>
@@ -105,7 +105,7 @@
                         <?php foreach ($Importadas as $cerv): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Importadas">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $cerv['img']; ?>" alt="Card image cap">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $cerv['nombre_producto']; ?></h5>
@@ -138,7 +138,7 @@
                         <?php foreach ($Barril as $cerv): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Barril">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $cerv['img']; ?>" alt="Card image cap">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $cerv['nombre_producto']; ?></h5>

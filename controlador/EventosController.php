@@ -8,6 +8,8 @@ class EventosController{
     }
     
     public static function eventos(){
+        $eventosModel = new EventosModel(); 
+        $eventos = $eventosModel->obtenerEventos();
         require_once('vista/opciones/eventos.php');
     }
     

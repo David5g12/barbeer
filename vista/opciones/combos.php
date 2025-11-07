@@ -25,7 +25,7 @@
                         <?php foreach ($combos as $comb): ?>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Clasicos">
                         <div class="card h-100">
-                            <img class="card-img-top img-fluid" src="vista/img/cocteles_ecabez.jpg" alt="Card image cap">
+                            <img class="card-img-top img-fluid" src="vista/img/<?php echo $comb['img']; ?>" alt="Card image cap">
                             <div class="card-body">
                                 <!-- Contenedor flex para título y precio -->
                                 <div class="d-flex justify-content-between align-items-center mb-2">

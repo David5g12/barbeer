@@ -44,7 +44,7 @@
                         <?php foreach ($Clasicos as $coct): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Clasicos">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $coct['img']; ?>" alt="Card image cap">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $coct['nombre_producto']; ?></h5>
@@ -76,7 +76,7 @@
                         <?php foreach ($delacasa as $coct): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="De la casa">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $coct['img']; ?>" alt="Card image cap">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $coct['nombre_producto']; ?></h5>
@@ -108,7 +108,7 @@
                         <?php foreach ($Sinalcohol as $coct): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Sin alcohol">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/corona.jpg" alt="Card image cap">
+                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $coct['img']; ?>" alt="Card image cap">
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $coct['nombre_producto']; ?></h5>

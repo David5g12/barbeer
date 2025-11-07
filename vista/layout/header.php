@@ -71,9 +71,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.php?c=obtenerDetallePedido&p=obtenerDetallePedido"><i class="bi bi-bag-check-fill"></i>Pedido</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.php?c=pedidos&p=barra"><i class="bi bi-grid-fill"></i> Barra</a>
-            </li>
             <?php endif; ?>
 
             <?php if (!isset($_SESSION['usuario'])): ?>
