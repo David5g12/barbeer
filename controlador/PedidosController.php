@@ -139,6 +139,8 @@ class PedidosController{
      public static function crearticket() {
         $PedidosModel = new PedidosModel();
         $pedido_id = $_SESSION['pedido_id'];
+        $empleado = $_SESSION['id_empleado'];
+        $nombreempleado = $PedidosModel->obtenerNombreEmpleado($empleado);
         $detallePedido = $PedidosModel->obtenerDetalle($pedido_id);
         include 'vista/tablas/ticket.php';
      }

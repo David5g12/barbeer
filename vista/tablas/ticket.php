@@ -1,6 +1,9 @@
 <link rel="stylesheet" href="vista/css/ticket.css">
+<?php
 
+?>
 <body class="body">
+
 
     <div class="ticket">
         <div class="ticket-header">
@@ -15,8 +18,8 @@
         </div>
 
         <div class="ticket-body">
-            <p><strong>Ticket:</strong> 10920</p>
-            <p><strong>Cajero:</strong> 2</p>
+            <p><strong>Ticket: #</strong><?= $_SESSION['pedido_id'] ?></p>
+            <p><strong>Mesero: # <?= $nombreempleado['nombre']?></p>
             <hr>
 
             <table class="ticket-items">

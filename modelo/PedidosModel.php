@@ -8,6 +8,13 @@ class PedidosModel{
         $stmt = $conexion->query("SELECT * FROM MESAS WHERE estado='Libre'");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function obtenerNombreEmpleado($id_empleado){
+        include_once('conexion.php');
+        $conexion = Conexion::getInstancia();
+        $stmt = $conexion->prepare("SELECT nombre FROM empleado WHERE id_empleado=?");
+        $stmt->execute([$id_empleado]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
     public function obtenerProductos() {
         include_once('conexion.php');
         $conexion = Conexion::getInstancia();
