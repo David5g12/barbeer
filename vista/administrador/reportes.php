@@ -88,7 +88,7 @@ foreach($reporte_mensual as $reporte){
 
         </div>
 
-        //no muevas nada del diseño  esta es la entrada de datos 
+        <!--no muevas nada del diseño  esta es la entrada de datos -->
         <?php
             // Datos simulados desde PHP semanal 
             $semanas = ["Lun", "Mar", "Mié", "Jue","vie","Sab","Dom"];
