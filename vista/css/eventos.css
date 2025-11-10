@@ -20,62 +20,83 @@ section{
     width: 84%;
 
 }
-
 .encabezado{
     margin: 1% 2%;
     width: 96%;
-    height: 25vh;
-    background-image: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.0)), url(../img/evento_encab.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    font-size: 1vw;
-    border: 1px solid rgb(49, 48, 48);
-    border-radius: 10px;
-    align-content: center;
+    height: auto;
+    font-size:15px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
 .encabezado .texto{
-    margin: 0% 1%;
-    width: 95%;
-    color: white;
-    font-size: 1vw;
-    height: 20vh;
+    width: 79%;
+    height: auto;
+}
+.encabezado .boton{
+    height: auto;
+    width: 18%;
+    display: flex;
+    align-items: center;
     align-content: center;
-}
-
-.sec_producto{
-    margin: 1% 2%;
-    width: 96%;
+    justify-content: end;
     
 }
-
-#producto{
-    margin-left: 2%;
-    width: 96%;
-    
-}
-#producto h1{
-    font-size: 1.8vw;
-    color: white;
-    float: left;
-}
-
-#producto img{
+.boton .btn{
+    background-color: darkgoldenrod;
     width: 100%;
-    height: 20vh;
+    font-size: 1vw;
+    justify-content: end;
 }
 
-#producto .card{
+
+.combos{
+    height: auto;
+    margin: 0% 2%;
+
+}
+.combos .container{
+    padding: 0% 0%;
+}
+.combos .card{
     background-color: black;
+    border-radius: 10px;
+    border: 1px solid rgb(23, 22, 22);
+}
+.img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.combos .card-body{
     color: white;
-    border: 1px solid  rgb(47, 46, 46);;
+    font-size: 15px;
 }
-#producto a{
-    background-color: rgb(222, 169, 33);
-    border: 1px solid darkgoldenrod;
+.combos .card-body .descripcion{
+    color:rgb(120, 114, 114);
+
 }
-#producto .precio{
-    color:rgb(222, 169, 33);;
+.combos .card-body .promocion{
+    background-color: #1e1c16;
+    border: 1px solid #5a4b1f;
+    padding-left: 5%;
 }
 
-
+.combos .card .botones{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.combos .botones .btn-edit{
+    width: 100%;
+    color: white;
+    border: 1px solid rgb(23, 22, 22);
+    margin-top: 1%;
+    background-color:darkgoldenrod;
+}

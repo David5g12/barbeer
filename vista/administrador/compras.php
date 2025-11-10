@@ -17,7 +17,7 @@
             </div>
             <div class="boton">
                 <a href="index.php?c=compras&p=productos" class="btn btn"><i class="bi bi-box-seam"></i> Gestionar producto</a>
-                <a href="https://www.mercadolibre.com.mx" class="btn btn"><i class="bi bi-plus"></i>Realizar compras</a>
+                <a href="index.php?c=proveedores&p=proveedores" class="btn btn"><i class="bi bi-plus"></i>Realizar compras</a>
 
             </div>
         </div>

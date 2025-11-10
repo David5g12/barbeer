@@ -107,7 +107,7 @@ class ComprasModel{
         $insertar = $conexion->prepare($insert);
 
         $insertar->execute([
-            ':nombre_producto' => $nombre,
+            ':nombre' => $nombre,
             ':categoria' => $categoria,
             ':tipo' =>$tipo,
             ':descripcion' =>$descripcion,

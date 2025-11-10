@@ -14,7 +14,9 @@
                 <h1>Productos</h1>
             </div>
             <div class="boton">
-                <a href="index.php?c=compras&p=AgregarProducto" class="btn btn-primary">Agregar producto</a>
+                <a href="index.php?c=compras&p=AgregarProducto" class="btn btn-success">Agregar producto</a>
+                <a href="index.php?c=combos&p=TablaCombos" class="btn btn-secondary">Crear combos</a>
+                <a href="index.php?c=eventos&p=TablaEventos" class="btn btn-warning text-dark">Registrar Eventos</a>
             </div>
                         
         </div>

@@ -113,7 +113,7 @@ class PedidosController{
         $detalle_pedido = $modelo->obtenerDetalle($pedido_id);
         if (count($detalle_pedido) > 0) {
                 $_SESSION['error'] = "No puedes cancelar el pedido mientras tenga productos agregados.";
-                header("Location: index.php?c=obtenerDetallePedido&p=obtenerDetallePedido");
+                header("Location:" .urlsite."index.php?c=obtenerDetallePedido&p=obtenerDetallePedido");
                 exit();
             }
         $mesa_id = $_POST['mesa_id'];
@@ -121,7 +121,7 @@ class PedidosController{
         $estado_pedido = $_POST['estado_pedido'];
         $modelo->cancelarPedido($pedido_id,$estado_pedido,$mesa_id,$estado_mesa);
         unset($_SESSION['pedido_id'], $_SESSION['mesa_id']);
-        header("Location: index.php?c=nuevoPedidoForm&p=nuevoPedidoForm");
+        header("location:".urlsite."index.php?c=nuevoPedidoForm&p=nuevoPedidoForm");
         
     }
 

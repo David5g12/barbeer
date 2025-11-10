@@ -70,8 +70,8 @@ section{
     
 }
 .encabezado .boton a{
-    background-color: darkgoldenrod;
     border: darkgoldenrod;
+    margin-left: 1%;
 }
 .tabla{
     background-color:black;

@@ -67,10 +67,5 @@
 
     </div>
 
-    <script>    
-
-        // Opcional: abrir ventana de impresión automáticamente
-        window.print();
-    </script>
-
+    
 </body>

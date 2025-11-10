@@ -82,7 +82,7 @@
             <div class="container my-4">
                 <div class="row" id="contenedor-cards">
                     <?php if ($datos_proveedores && count($datos_proveedores) > 0): ?>
-                        <?php foreach ($datos_proveedores as $proveedor): ?>
+                        <?php foreach ($datos_proveedores as $proveedor):?>
                     <div class="col-12 col-sm-6 col-md-4 col-lg-6 mb-4">
                         <div class="card h-100">
                             <div class="card-body">
@@ -129,8 +129,8 @@
                                 </a>
                                 </div>
                                 <div class="botones">
-                                    <a href="index.php?c=proveedores&p=EditarProveedores" class="btn btn-edit"><i class="bi bi-pencil"></i>Editar</a>
-                                    <a href="" class="btn btn-delete"><i class="bi bi-trash"></i></a>
+                                    <a href="index.php?c=proveedores&p=EditarProveedores&id=<?= $proveedor['proveedor_id']  ?>" class="btn btn-edit"><i class="bi bi-pencil"></i>Editar</a>
+                                    <a href="index.php?c=proveedores&p=EliminarProveedor&id=<?= $proveedor['proveedor_id'] ?> " class="btn btn-delete"><i class="bi bi-trash"></i></a>
 
                                 </div>
                                 

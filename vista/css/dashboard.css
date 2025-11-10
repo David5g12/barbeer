@@ -82,6 +82,9 @@ section{
     height: 8vh;
     background-color:  rgb(10, 10, 12);
 }
+#toggleProductos{
+    background-color: darkgoldenrod;
+}
 
 .prod_vendido{
     color: white;

@@ -121,7 +121,8 @@ $obtenerDatos = isset($obtenerDatos) ? $obtenerDatos : null;
         
              
 <div id="actividades" class="container my-0">
-            <div class="col-12 col-md-5 custom-col prod_vendido">
+            <button id="toggleProductos" class="btn btn-desplegar mb-2">Actividades recientes</button>
+            <div id="productosMasVendidos" class="col-12 col-md-5 custom-col prod_vendido">
                 <h5>Actividades recientes</h5>
 
                 <?php if ($actividadesRecientes && count($actividadesRecientes) > 0): ?>
@@ -187,16 +188,17 @@ $obtenerDatos = isset($obtenerDatos) ? $obtenerDatos : null;
                 
         
             
-                  
                 
-
-            
-        
-
-
-
-
 
 
     </div>
+
+
+    <script>
+        document.getElementById('toggleProductos').addEventListener('click', function() {
+            const div = document.getElementById('productosMasVendidos');
+            div.style.display = (div.style.display === 'none') ? 'block' : 'none';
+        });
+    </script>
+
 </section>

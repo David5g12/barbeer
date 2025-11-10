@@ -42,7 +42,9 @@
                         <?php foreach ($Whisky as $desti): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Whisky">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    <div class="img-container">
+                                        <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $desti['nombre_producto']; ?></h5>
@@ -74,7 +76,9 @@
                         <?php foreach ($Ron as $desti): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Ron">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    <div class="img-container">
+                                        <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $desti['nombre_producto']; ?></h5>
@@ -106,7 +110,9 @@
                         <?php foreach ($Vodka as $desti): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Vodka">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    <div class="img-container">
+                                        <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $desti['nombre_producto']; ?></h5>
@@ -138,7 +144,9 @@
                         <?php foreach ($Tequila as $desti): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Tequila">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    <div class="img-container">
+                                        <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $desti['nombre_producto']; ?></h5>
@@ -163,14 +171,16 @@
                             </div>
                         <?php endforeach; ?>
                     <?php else: ?>
-                        <p>No se encontraron Destilados.</p>
+                        <p></p>
                     <?php endif; ?>
 
                     <?php if ($Shots && count($Shots) > 0): ?>
                         <?php foreach ($Shots as $desti): ?>
                             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-categoria="Shots">
                                 <div class="card h-100">
-                                    <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    <div class="img-container">
+                                        <img class="card-img-top img-fluid" src="vista/img/<?php echo $desti['img']; ?>" alt="Card image cap">
+                                    </div>
                                     <div class="card-body">
                                         <div class="d-flex justify-content-between align-items-center mb-2">
                                             <h5 class="card-title mb-0"><?php echo $desti['nombre_producto']; ?></h5>
@@ -195,7 +205,7 @@
                             </div>
                         <?php endforeach; ?>
                     <?php else: ?>
-                        <p>No se encontraron Destilados.</p>
+                        <p>.</p>
                     <?php endif; ?>
 
  

@@ -11,22 +11,41 @@
 /* Sección principal */
 section {
     display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh; /* altura completa de la pantalla */
-    background-color: #f7f7f7;
+    background-color: black;
+    flex-wrap: wrap;
+
 }
 
-/* Contenedor del contenido */
-.contenido {
+.header{
+    width: 15%;
+    height: 100vh;
+    background-color: black; 
+    margin-left: 1%;
+    border: 1px solid rgb(49, 48, 48); 
+}
+.contenido{
+    background-color:black;
+    width: 84%;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center; /* centra títulos y texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.contenido .tablas{
+
     background-color: #ffffff;
     padding: 30px 40px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    width: 600px; /* ancho fijo, se puede ajustar */
-    max-width: 90%;
     text-align: center; /* centra títulos y texto */
+    width: 50%;
 }
+
 
 /* Encabezados */
 h2 {
@@ -61,7 +80,7 @@ table th {
 
 /* Formularios */
 form {
-    margin-bottom: 20px;
+    margin-bottom: 8%;
     display: flex;
     justify-content: center;
     gap: 10px;

@@ -57,14 +57,14 @@ $metodosPermitidos = [
     'CervezasController' => ['cervezas'],
     'CoctelesController' => ['cocteles'],
     'DestiladosController' => ['destilados'],
-    'CombosController' => ['combos'],
-    'EventosController' => ['eventos'],
-    'administradorController' => ['facturas','ventas','compras_pro'],
+    'CombosController' => ['combos','TablaCombos','AgregarCombos','RegistrarCombos','EditarCombos','ActualizarCombos','EliminarCombos'],
+    'EventosController' => ['eventos','TablaEventos','AgregarEventos','RegistrarEvento','EditarEventos','ActualizarEventos','EliminarEventos'],
+    'administradorController' => ['facturas','ventas','compras_pro','RegistrarEvento'],
     'loginController' => ['sesion', 'registro', 'iniciarSesion', 'cerrarSesion', 'registrarse'],
     
 
     'ComprasController' =>['compras','productos','AgregarProducto','GuardarProducto','EditarProducto','ActualizarProducto','EliminarProductos'],
-    'ProveedoresController' => ['proveedores','AgregarProveedores','EditarProveedores'],
+    'ProveedoresController' => ['proveedores','AgregarProveedores','ResgistrarProveedores','EditarProveedores','ActualizarProveedor','EliminarProveedor'],
     'ReportesController' =>['reportes'],
     'FacturasController' => ['facturas','ticket','factura'],
     'PedidosController' => ['pedidos','barra', 'nuevoPedidoForm', 'crearPedido', 'agregarProducto', 'cerrarPedido', 'obtenerDetallePedido', 'eliminarProductopedido', 'cancelarPedido', 'crearticket'],

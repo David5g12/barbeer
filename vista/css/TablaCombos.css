@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+section{
+    background-color:black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header{
+    width: 15%;
+    height: 100vh;
+    background-color: black; 
+    margin-left: 1%;
+    border: 1px solid rgb(49, 48, 48); 
+}
+
+.contenido{
+    background-color:black;
+    width: 84%;
+
+}
+.encabezado{
+    margin: 1% 2%;
+    width: 96%;
+    height: auto;
+    font-size:15px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+.encabezado .texto{
+    width: 79%;
+    height: auto;
+}
+.encabezado .boton{
+    height: auto;
+    width: 18%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: end;
+    
+}
+.boton .btn{
+    background-color: darkgoldenrod;
+    width: 100%;
+    font-size: 1vw;
+    justify-content: end;
+}
+
+
+.combos{
+    height: auto;
+    margin: 0% 2%;
+
+}
+.combos .container{
+    padding: 0% 0%;
+}
+.combos .card{
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid rgb(23, 22, 22);
+}
+.img-container {
+  height: 200px;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.combos .card-body{
+    color: white;
+    font-size: 15px;
+}
+.combos .card .sup{
+    color:  rgb(120, 114, 114);
+}
+.combos .datos{
+    border-bottom: 1px solid  rgb(23, 22, 22);;
+}
+.combos .card .datos p{
+    color:  rgb(120, 114, 114);
+}
+
+.combos .card .precio{
+    color: darkgoldenrod;
+}
+
+
+.combos .card .botones{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.combos .botones .btn-edit{
+    width: 90%;
+    color: white;
+    border: 1px solid rgb(23, 22, 22);
+    margin-top: 1%;
+    background-color:darkgoldenrod;
+}
+.combos .botones .btn-delete{
+    border: 1px solid red;
+    width: 8%;
+    color: red;
+    margin-left: 2%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

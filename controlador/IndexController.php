@@ -7,6 +7,8 @@ class IndexController{
     }
 
     public static function index(){
+        $productos = new IndexModel();
+        $datosProducto =$productos->ConsultaProducto();
         require_once('vista/index.php');
     }
 }
