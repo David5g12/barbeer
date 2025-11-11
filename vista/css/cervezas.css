@@ -103,6 +103,9 @@ section{
 #producto .precio{
     color:rgb(222, 169, 33);;
 }
+#producto #cantidad{
+    width: 20%;
+}
 
 
 

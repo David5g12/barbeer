@@ -70,7 +70,7 @@
               
               <p class="card-text"><?= $producto['tipo']?></p>
               <p class="card-text"><?= $producto['descripcion']?></p>
-              <a class="btn btn-primary w-100" href="index.php?c=sesion&p=sesion">Agregar al pedido</a>
+              
             </div>
           </div>
         </div>

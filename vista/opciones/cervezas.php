@@ -54,7 +54,7 @@
 
                                         <!-- FORMULARIO -->
                                         <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
-                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input id="cantidad" type="number" name="cantidad" min="1" value="1">
                                             <input type="hidden" name="producto_id" value="<?php echo $cerv['producto_id']; ?>">
                                             <input type="hidden" name="nombre" value="<?php echo $cerv['nombre_producto']; ?>">
                                             <input type="hidden" name="precio_venta" value="<?php echo $cerv['precio_venta']; ?>">
@@ -89,7 +89,7 @@
 
                                         <!-- FORMULARIO -->
                                         <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
-                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input id="cantidad" type="number" name="cantidad" min="1" value="1">
                                             <input type="hidden" name="producto_id" value="<?php echo $cerv['producto_id']; ?>">
                                             <input type="hidden" name="nombre" value="<?php echo $cerv['nombre_producto']; ?>">
                                             <input type="hidden" name="precio_venta" value="<?php echo $cerv['precio_venta']; ?>">
@@ -123,7 +123,7 @@
 
                                         <!-- FORMULARIO -->
                                         <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
-                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input id="cantidad" type="number" name="cantidad" min="1" value="1">
                                             <input type="hidden" name="producto_id" value="<?php echo $cerv['producto_id']; ?>">
                                             <input type="hidden" name="nombre" value="<?php echo $cerv['nombre_producto']; ?>">
                                             <input type="hidden" name="precio_venta" value="<?php echo $cerv['precio_venta']; ?>">
@@ -158,7 +158,7 @@
 
                                         <!-- FORMULARIO -->
                                         <form method="post" action="index.php?c=agregarProducto&p=agregarProducto">
-                                            <input type="number" name="cantidad" min="1" value="1">
+                                            <input id="cantidad"type="number" name="cantidad" min="1" value="1">
                                             <input type="hidden" name="producto_id" value="<?php echo $cerv['producto_id']; ?>">
                                             <input type="hidden" name="nombre" value="<?php echo $cerv['nombre_producto']; ?>">
                                             <input type="hidden" name="precio_venta" value="<?php echo $cerv['precio_venta']; ?>">
