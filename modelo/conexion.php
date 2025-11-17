@@ -2,10 +2,10 @@
 class Conexion extends PDO {
     private static $instancia = null;
 
-    private $hostBD = 'localhost';
-    private $nombreBD = 'SmartBeerDB';
-    private $usuarioBD = 'root';
-    private $passwordBD = '+David31';
+    private $hostBD = 'tu servidor';
+    private $nombreBD = 'nom db';
+    private $usuarioBD = 'usuario';
+    private $passwordBD = 'password';
 
     private function __construct() {
         parent::__construct(
